@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   return (
@@ -42,6 +43,12 @@ export default function Login() {
                         />
                       </div>
                       <button className="btn btn-primary col-12">Masuk</button>
+                      <p className="text-center text-muted mt-2">
+                           Belum punya akun?{" "}
+                            <span>
+                              <Link to={"/register"}>disini</Link>
+                            </span>
+                      </p>
                     </div>
                   </div>
                 </div>
