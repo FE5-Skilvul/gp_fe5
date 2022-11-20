@@ -4,6 +4,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import RegisterKampus from "./components/RegisterKampus";
 import Detail from "./pages/Detail";
+import InfoDetail from "./pages/InfoDetail";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/register" element={<Register/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/detail" element={<Detail/>} />
+        <Route path="/detail/:id" element={<InfoDetail/>} />
       </Routes>
     </>
   );

@@ -13,19 +13,21 @@ function Detail() {
   useEffect(() => {
     dispatch(getKampus());
   }, []);
-
-  console.log(state);
+  
   return (
     <Layout>
       <Nav />
       <ListKampus>
         {state.list.map((el) => (
-          <CardList
-            key={el.id}
-            namaKampus={el.namaKampus}
-            lokasi={el.lokasi}
-            urlImg={el.image}
-          />
+          <div key={el.id} className="col-lg-3 mb-4">
+            <CardList
+              key={el.id}
+              namaKampus={el.namaKampus}
+              lokasi={el.lokasi}
+              urlImg={el.image}
+              id={el.id}
+            />
+          </div>
         ))}
       </ListKampus>
     </Layout>
